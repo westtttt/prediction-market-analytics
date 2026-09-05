@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Retrieved Markets | Forecast Evidence</title>
+    <meta name="description" content="Review retrieved prediction markets before reading the forecast result.">
+    <script>
+      if (window.location.protocol === "file:") {
+        window.location.replace("http://127.0.0.1:4285/forecast/evidence");
+      }
+    </script>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="workspace-page evidence-page">
+      <header class="workspace-header">
+        <a class="brand" href="/workspace" aria-label="Forecast Evidence workspace">
+          <span>FE</span>
+          <strong>Forecast Evidence</strong>
+        </a>
+        <nav class="workspace-nav" aria-label="Workspace navigation">
+          <a href="/workspace">Workspace</a>
+          <a href="/forecast">Forecast</a>
+          <a href="/data-analysis">Project</a>
+        </nav>
+        <div class="workspace-account" id="workspaceAccount">
+          <span>Checking session</span>
+        </div>
+      </header>
+
+      <section class="evidence-hero" aria-labelledby="evidenceTitle">
+        <div>
+          <p class="eyebrow">Retrieved markets</p>
+          <h1 id="evidenceTitle">Review the evidence.</h1>
+          <p id="evidenceQuestion">Loading forecast question.</p>
+        </div>
+        <aside class="workflow-panel" aria-label="Forecast workflow steps">
+          <ol>
+            <li>
+              <span>1</span>
+              <strong>Question</strong>
+              <p>Target event captured.</p>
+            </li>
+            <li class="active">
+              <span>2</span>
+              <strong>Evidence</strong>
+              <p>Inspect retrieved markets.</p>
+            </li>
+            <li>
+              <span>3</span>
+              <strong>Result</strong>
+              <p>Compare forecast signals.</p>
+            </li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="evidence-layout" aria-label="Retrieved market review">
+        <aside class="evidence-sidebar">
+          <div class="evidence-summary" id="evidenceSummary"></div>
+          <div class="method-note" id="methodNote"></div>
+          <a class="card-action secondary" href="/forecast">Ask another question</a>
+          <a class="card-action" id="resultLink" href="/forecast/result" aria-disabled="true">Continue to result</a>
+        </aside>
+
+        <section class="market-review" aria-labelledby="marketReviewTitle">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Evidence set</p>
+              <h2 id="marketReviewTitle">Top retrieved markets</h2>
+            </div>
+            <p id="marketReviewMeta"></p>
+          </div>
+          <div class="event-list" id="eventList"></div>
+          <div class="market-list expanded" id="marketList"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/forecast_evidence.js"></script>
+  </body>
+</html>

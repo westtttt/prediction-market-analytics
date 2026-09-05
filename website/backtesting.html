@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Backtesting | Forecast Evidence</title>
+    <meta name="description" content="Backtesting evidence and caveats for the Forecast Evidence project.">
+    <script>
+      if (window.location.protocol === "file:") {
+        window.location.replace("http://127.0.0.1:4285/backtesting");
+      }
+    </script>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="workspace-page overview-page backtesting-page">
+      <header class="workspace-header">
+        <a class="brand" href="/workspace" aria-label="Forecast Evidence workspace">
+          <span>FE</span>
+          <strong>Forecast Evidence</strong>
+        </a>
+        <nav class="workspace-nav" aria-label="Workspace navigation">
+          <a href="/workspace">Workspace</a>
+          <a href="/forecast">Forecast</a>
+          <a class="active" href="/data-analysis">Project</a>
+        </nav>
+        <div class="workspace-account" id="workspaceAccount">
+          <span>Checking session</span>
+        </div>
+      </header>
+
+      <section class="compact-page-hero" aria-labelledby="backtestingTitle">
+        <div>
+          <p class="eyebrow">Backtesting</p>
+          <h1 id="backtestingTitle">How the forecasts were tested.</h1>
+          <p>
+            Historical checks compare query-led aggregation methods and
+            event-family normalisation against resolved Polymarket outcomes.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-subnav" aria-label="Project section navigation">
+        <a href="/data-analysis">Data Analysis</a>
+        <a href="/results">Results</a>
+        <a class="active" href="/backtesting">Backtesting</a>
+      </section>
+
+      <section class="readiness-strip backtest-summary" aria-labelledby="backtestCoverageTitle">
+        <div>
+          <p class="eyebrow">Evaluation coverage</p>
+          <h2 id="backtestCoverageTitle">What entered the tests</h2>
+        </div>
+        <div class="readiness-grid compact-readiness" id="backtestCoverage"></div>
+      </section>
+
+      <section class="overview-card interpretation-panel backtest-reader" aria-labelledby="backtestReaderTitle">
+        <p class="eyebrow">How to read this page</p>
+        <h2 id="backtestReaderTitle">Two backtests support two different claims.</h2>
+        <p>
+          The target-question test asks whether retrieved markets can improve a
+          forecast for a user-supplied question. The event-family test asks
+          whether coherent sibling Yes markets should be normalised before they
+          are scored.
+        </p>
+      </section>
+
+      <section class="backtest-grid" aria-label="Backtest evidence">
+        <article class="overview-card backtest-wide">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Query-led aggregation</p>
+              <h2>Direct target market remains the benchmark.</h2>
+            </div>
+            <p>Lower scores are better.</p>
+          </div>
+          <div class="backtest-method-table" id="backtestMethodTable"></div>
+        </article>
+
+        <article class="overview-card visual-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Event-family normalisation</p>
+              <h2>Scores improve after normalising.</h2>
+            </div>
+            <p>Eligible event families only.</p>
+          </div>
+          <div class="slope-chart" id="backtestSlopeChart"></div>
+        </article>
+
+        <article class="overview-card backtest-horizon">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Horizon detail</p>
+              <h2>Improvement by horizon</h2>
+            </div>
+            <p>Score deltas.</p>
+          </div>
+          <div class="horizon-detail-table" id="horizonDetailTable"></div>
+        </article>
+      </section>
+
+      <section class="overview-card caveat-panel" aria-labelledby="caveatTitle">
+        <p class="eyebrow">Caveats</p>
+        <h2 id="caveatTitle">What the backtests do not claim.</h2>
+        <div class="caveat-list">
+          <article>
+            <strong>Direct targets are unusually strong.</strong>
+            <p>When an exact market exists, it is already a high-quality signal.</p>
+          </article>
+          <article>
+            <strong>Retrieval evidence is contextual.</strong>
+            <p>Related markets are most useful for explanation and triangulation, not automatic override.</p>
+          </article>
+          <article>
+            <strong>Normalisation is conditional.</strong>
+            <p>It applies to coherent event families with sibling Yes markets, not every market cluster.</p>
+          </article>
+          <article>
+            <strong>Coverage is uneven.</strong>
+            <p>Historical prices, liquidity, and resolved labels determine which rows can be evaluated.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="/backtesting.js"></script>
+  </body>
+</html>

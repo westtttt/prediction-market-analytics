@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing Page | Forecast Evidence</title>
+    <meta name="description" content="Forecast Evidence signed-in landing page.">
+    <script>
+      if (window.location.protocol === "file:") {
+        window.location.replace("http://127.0.0.1:4285/workspace");
+      }
+    </script>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="workspace-page">
+      <header class="workspace-header">
+        <a class="brand" href="/workspace" aria-label="Forecast Evidence landing page">
+          <span>FE</span>
+          <strong>Forecast Evidence</strong>
+        </a>
+        <div class="workspace-account" id="workspaceAccount">
+          <span>Checking session</span>
+        </div>
+      </header>
+
+      <section class="workspace-hero" aria-labelledby="workspaceTitle">
+        <div>
+          <p class="eyebrow">Landing page</p>
+          <h1 id="workspaceTitle">Welcome back.</h1>
+          <p id="workspaceIntro">Start a forecast, or review the evidence behind the project.</p>
+        </div>
+        <article class="workspace-result" id="workspaceResult">
+          <span>Headline result</span>
+          <strong>14.5%</strong>
+          <p>Lower Brier score after normalising coherent event-family probabilities.</p>
+        </article>
+      </section>
+
+      <section class="metric-strip summary-strip workspace-metrics" id="workspaceMetrics" aria-label="Project summary metrics"></section>
+
+      <section class="workspace-link-panel" aria-labelledby="workspaceLinksTitle">
+        <div>
+          <p class="eyebrow">Project evidence</p>
+          <h2 id="workspaceLinksTitle">Review the research.</h2>
+        </div>
+        <div class="workspace-link-list">
+          <a href="/data-analysis"><strong>Data Analysis</strong><span>Corpus and charts</span></a>
+          <a href="/results"><strong>Results</strong><span>Main findings</span></a>
+          <a href="/backtesting"><strong>Backtesting</strong><span>Scoring evidence</span></a>
+        </div>
+      </section>
+
+      <section class="workspace-focus-grid" aria-labelledby="workspaceFocusTitle">
+        <article class="workspace-focus-panel">
+          <p class="eyebrow">Primary workflow</p>
+          <h2 id="workspaceFocusTitle">Ask a question and follow the evidence.</h2>
+          <p>
+            The artefact retrieves related markets, separates evidence review from
+            the final comparison, and keeps the method trace visible.
+          </p>
+          <a class="card-action" href="/forecast">Start a forecast</a>
+        </article>
+
+        <article class="workspace-claims">
+          <p class="eyebrow">Research framing</p>
+          <div>
+            <strong>Direct markets are hard to beat.</strong>
+            <p>For exact target questions, the direct market remains the strongest benchmark.</p>
+          </div>
+          <div>
+            <strong>Sibling markets add value.</strong>
+            <p>When Polymarket has a coherent event family, normalisation improves scores.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="/workspace.js"></script>
+  </body>
+</html>

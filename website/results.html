@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Results | Forecast Evidence</title>
+    <meta name="description" content="Main forecasting findings for the Forecast Evidence project.">
+    <script>
+      if (window.location.protocol === "file:") {
+        window.location.replace("http://127.0.0.1:4285/results");
+      }
+    </script>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="workspace-page overview-page results-page">
+      <header class="workspace-header">
+        <a class="brand" href="/workspace" aria-label="Forecast Evidence workspace">
+          <span>FE</span>
+          <strong>Forecast Evidence</strong>
+        </a>
+        <nav class="workspace-nav" aria-label="Workspace navigation">
+          <a href="/workspace">Workspace</a>
+          <a href="/forecast">Forecast</a>
+          <a class="active" href="/data-analysis">Project</a>
+        </nav>
+        <div class="workspace-account" id="workspaceAccount">
+          <span>Checking session</span>
+        </div>
+      </header>
+
+      <section class="overview-hero compact-overview" aria-labelledby="resultsTitle">
+        <div>
+          <p class="eyebrow">Main findings</p>
+          <h1 id="resultsTitle">What the forecasting tests found.</h1>
+          <p>
+            The project produces two distinct results: direct markets remain a
+            hard benchmark for exact target questions, while event-family
+            structure improves probabilities when sibling markets are coherent.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-subnav" aria-label="Project section navigation">
+        <a href="/data-analysis">Data Analysis</a>
+        <a class="active" href="/results">Results</a>
+        <a href="/backtesting">Backtesting</a>
+      </section>
+
+      <section class="overview-card findings-panel" aria-label="Dissertation findings">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Summary</p>
+            <h2>Main result</h2>
+          </div>
+          <p>Lower Brier is better.</p>
+        </div>
+        <div class="finding-summary" id="findingSummary"></div>
+      </section>
+
+      <section class="results-grid" aria-label="Result comparison">
+        <article class="overview-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Aggregation backtest</p>
+              <h2>Target-question methods</h2>
+            </div>
+            <p>Lower Brier is better.</p>
+          </div>
+          <div class="result-method-list" id="queryMethodList"></div>
+        </article>
+
+        <article class="overview-card visual-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Normalisation backtest</p>
+              <h2>Raw versus normalised</h2>
+            </div>
+            <p>Eligible event families only.</p>
+          </div>
+          <div class="slope-chart" id="eventSlopeChart"></div>
+        </article>
+
+        <article class="overview-card visual-card wide">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Forecast horizon</p>
+              <h2>Improvement varies by window.</h2>
+            </div>
+            <p>Brier improvement by horizon.</p>
+          </div>
+          <div class="horizon-chart" id="eventHorizonChart"></div>
+        </article>
+      </section>
+
+      <section class="overview-card interpretation-panel" aria-labelledby="interpretationTitle">
+        <p class="eyebrow">Interpretation</p>
+        <h2 id="interpretationTitle">These findings answer different questions.</h2>
+        <p>
+          The query-led workflow tests whether retrieved related markets can
+          improve a forecast for a user-supplied target question. The event
+          correction test starts from a known coherent Polymarket event family
+          and asks whether sibling probabilities should be normalised. That is
+          why the final claim is deliberately balanced rather than absolute.
+        </p>
+      </section>
+    </main>
+
+    <script src="/results.js"></script>
+  </body>
+</html>

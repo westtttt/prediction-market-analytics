@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Start a Forecast | Forecast Evidence</title>
+    <meta name="description" content="Ask a forecasting question and review supporting market evidence.">
+    <script>
+      if (window.location.protocol === "file:") {
+        window.location.replace("http://127.0.0.1:4285/forecast");
+      }
+    </script>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="workspace-page forecast-page">
+      <header class="workspace-header">
+        <a class="brand" href="/workspace" aria-label="Forecast Evidence workspace">
+          <span>FE</span>
+          <strong>Forecast Evidence</strong>
+        </a>
+        <nav class="workspace-nav" aria-label="Workspace navigation">
+          <a href="/workspace">Workspace</a>
+          <a class="active" href="/forecast">Forecast</a>
+          <a href="/data-analysis">Project</a>
+        </nav>
+        <div class="workspace-account" id="workspaceAccount">
+          <span>Checking session</span>
+        </div>
+      </header>
+
+      <section class="forecast-shell" aria-labelledby="forecastTitle">
+        <div class="forecast-main">
+          <p class="eyebrow">Forecast workflow</p>
+          <h1 id="forecastTitle">Start with a question.</h1>
+          <p class="forecast-lede">
+            Enter a forecasting question, then use the retrieved market evidence to decide whether the direct market, aggregation, or event structure signal should carry most weight.
+          </p>
+
+          <form class="question-panel" id="questionForm">
+            <label for="forecastQuestion">Forecasting question</label>
+            <textarea id="forecastQuestion" name="question" rows="4" placeholder="Will a named event happen before a stated deadline?"></textarea>
+            <div class="question-actions">
+              <button type="submit" id="findEvidenceButton">Find evidence</button>
+              <p id="questionStatus">Premium accounts can run custom forecast questions.</p>
+            </div>
+          </form>
+        </div>
+
+        <aside class="workflow-panel" aria-label="Forecast workflow steps">
+          <ol>
+            <li class="active">
+              <span>1</span>
+              <strong>Question</strong>
+              <p>Define the target event clearly.</p>
+            </li>
+            <li id="evidenceStep">
+              <span>2</span>
+              <strong>Evidence</strong>
+              <p>Retrieve related markets.</p>
+            </li>
+            <li id="resultStep">
+              <span>3</span>
+              <strong>Result</strong>
+              <p>Compare forecast signals.</p>
+            </li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="forecast-review-grid forecast-preview-grid" aria-label="Forecast review">
+        <article class="review-panel">
+          <span>Evidence</span>
+          <strong>Evidence review page</strong>
+          <p id="evidenceState">Retrieved markets will open on a separate evidence page after you submit a question.</p>
+        </article>
+        <article class="review-panel">
+          <span>Result</span>
+          <strong>Result follows review</strong>
+          <p id="resultState">The forecast result should be read after inspecting what markets were retrieved.</p>
+        </article>
+        <article class="review-panel">
+          <span>Method</span>
+          <strong>Method trace</strong>
+          <p id="methodState">The evidence page will carry the retrieval method, top event, and snapshot status.</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="/forecast.js"></script>
+  </body>
+</html>

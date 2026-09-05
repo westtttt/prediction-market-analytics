@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forecast Result | Forecast Evidence</title>
+    <meta name="description" content="Compare forecast signals after reviewing retrieved prediction-market evidence.">
+    <script>
+      if (window.location.protocol === "file:") {
+        window.location.replace("http://127.0.0.1:4285/forecast/result");
+      }
+    </script>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="workspace-page result-page">
+      <header class="workspace-header">
+        <a class="brand" href="/workspace" aria-label="Forecast Evidence workspace">
+          <span>FE</span>
+          <strong>Forecast Evidence</strong>
+        </a>
+        <nav class="workspace-nav" aria-label="Workspace navigation">
+          <a href="/workspace">Workspace</a>
+          <a href="/forecast">Forecast</a>
+          <a href="/data-analysis">Project</a>
+        </nav>
+        <div class="workspace-account" id="workspaceAccount">
+          <span>Checking session</span>
+        </div>
+      </header>
+
+      <section class="result-hero" aria-labelledby="resultTitle">
+        <div>
+          <p class="eyebrow">Forecast result</p>
+          <h1 id="resultTitle">Compare the signals.</h1>
+          <p id="resultQuestion">Loading forecast question.</p>
+        </div>
+        <aside class="workflow-panel" aria-label="Forecast workflow steps">
+          <ol>
+            <li>
+              <span>1</span>
+              <strong>Question</strong>
+              <p>Target event captured.</p>
+            </li>
+            <li>
+              <span>2</span>
+              <strong>Evidence</strong>
+              <p>Retrieved markets reviewed.</p>
+            </li>
+            <li class="active">
+              <span>3</span>
+              <strong>Result</strong>
+              <p>Compare forecast signals.</p>
+            </li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="result-layout" aria-label="Forecast result">
+        <article class="result-primary" id="primaryResult"></article>
+        <aside class="result-context" id="resultContext"></aside>
+      </section>
+
+      <section class="method-comparison" aria-labelledby="methodComparisonTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Aggregation methods</p>
+            <h2 id="methodComparisonTitle">Method comparison</h2>
+          </div>
+          <p id="methodComparisonMeta"></p>
+        </div>
+        <div class="method-table" id="methodTable"></div>
+      </section>
+    </main>
+
+    <script src="/forecast_result.js"></script>
+  </body>
+</html>

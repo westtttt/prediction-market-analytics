@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forecast Evidence</title>
+    <meta name="description" content="Sign in or create an account for the Forecast Evidence workspace.">
+    <script>
+      if (window.location.protocol === "file:") {
+        window.location.replace("http://127.0.0.1:4285/");
+      }
+    </script>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="login-page">
+      <section class="login-intro" aria-labelledby="pageTitle">
+        <a class="brand" href="/" aria-label="Forecast Evidence home">
+          <span>FE</span>
+          <strong>Forecast Evidence</strong>
+        </a>
+        <div>
+          <p class="eyebrow">Prediction-market workspace</p>
+          <h1 id="pageTitle">Sign in to continue.</h1>
+          <p id="pageSubtitle">
+            Access the forecasting workspace to ask questions, review supporting market evidence,
+            and compare forecast signals.
+          </p>
+        </div>
+      </section>
+
+      <section class="account-card" aria-label="Account access">
+        <div class="mode-tabs" role="tablist" aria-label="Account actions">
+          <button class="active" id="signInTab" type="button" role="tab" aria-selected="true" aria-controls="signInPanel">Sign in</button>
+          <button id="createTab" type="button" role="tab" aria-selected="false" aria-controls="createPanel">Create account</button>
+        </div>
+
+        <div class="session-panel" id="sessionPanel" hidden></div>
+
+        <form class="account-form" id="signInPanel" autocomplete="on">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" name="email" type="email" autocomplete="username" value="premium@example.test" required>
+
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" name="password" type="password" autocomplete="current-password" value="premium-demo" required>
+
+          <button type="submit">Sign in</button>
+        </form>
+
+        <form class="account-form" id="createPanel" autocomplete="on" hidden>
+          <label for="createName">Name</label>
+          <input id="createName" name="name" type="text" autocomplete="name" required>
+
+          <label for="createEmail">Email</label>
+          <input id="createEmail" name="email" type="email" autocomplete="email" required>
+
+          <label for="createPassword">Password</label>
+          <input id="createPassword" name="password" type="password" autocomplete="new-password" minlength="8" required>
+
+          <button type="submit">Create account</button>
+        </form>
+
+        <p class="message" id="message" role="status">Use a demo account or create a new local account.</p>
+
+        <div class="demo-accounts" aria-label="Demo accounts">
+          <span>Demo accounts</span>
+          <code>free@example.test / free-demo</code>
+          <code>premium@example.test / premium-demo</code>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Analysis | Forecast Evidence</title>
+    <meta name="description" content="Descriptive analysis of the Polymarket market corpus used by Forecast Evidence.">
+    <script>
+      if (window.location.protocol === "file:") {
+        window.location.replace("http://127.0.0.1:4285/data-analysis");
+      }
+    </script>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="workspace-page overview-page">
+      <header class="workspace-header">
+        <a class="brand" href="/workspace" aria-label="Forecast Evidence workspace">
+          <span>FE</span>
+          <strong>Forecast Evidence</strong>
+        </a>
+        <nav class="workspace-nav" aria-label="Workspace navigation">
+          <a href="/workspace">Workspace</a>
+          <a href="/forecast">Forecast</a>
+          <a class="active" href="/data-analysis">Project</a>
+        </nav>
+        <div class="workspace-account" id="workspaceAccount">
+          <span>Checking session</span>
+        </div>
+      </header>
+
+      <section class="compact-page-hero" aria-labelledby="datasetTitle">
+        <div>
+          <p class="eyebrow">Data analysis</p>
+          <h1 id="datasetTitle">What the market corpus looks like.</h1>
+          <p>
+            Graph-led descriptive views of category scale, creation over time,
+            coverage, and volume concentration in the cleaned Polymarket data.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-subnav" aria-label="Project section navigation">
+        <a class="active" href="/data-analysis">Data Analysis</a>
+        <a href="/results">Results</a>
+        <a href="/backtesting">Backtesting</a>
+      </section>
+
+      <section class="readiness-strip" aria-labelledby="readinessTitle">
+        <div>
+          <p class="eyebrow">Coverage</p>
+          <h2 id="readinessTitle">Analysis readiness</h2>
+        </div>
+        <div class="readiness-grid compact-readiness" id="readinessGrid"></div>
+      </section>
+
+      <section class="dataset-grid balanced">
+        <article class="overview-card dataset-chart-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Dataset composition</p>
+              <h2>Category breakdown</h2>
+            </div>
+            <div class="segmented-control" id="categoryMetric" aria-label="Category metric">
+              <button type="button" data-metric="volume" class="active">Volume</button>
+              <button type="button" data-metric="markets">Markets</button>
+              <button type="button" data-metric="events">Events</button>
+            </div>
+          </div>
+          <p class="chart-intro" id="categoryIntro"></p>
+          <div class="category-table" id="categoryChart"></div>
+        </article>
+
+        <article class="overview-card dataset-chart-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Volume concentration</p>
+              <h2>Lorenz curve</h2>
+            </div>
+          </div>
+          <p class="chart-intro">
+            Volume is concentrated in a small share of markets, so a Lorenz
+            curve explains the skew more clearly than summary bars.
+          </p>
+          <div class="lorenz-chart" id="lorenzChart"></div>
+        </article>
+      </section>
+
+      <section class="dataset-grid single">
+        <article class="overview-card dataset-chart-card wide">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Market creation</p>
+              <h2>Creation over time</h2>
+            </div>
+          </div>
+          <div class="category-picker" id="categoryPicker" aria-label="Time-series category selector"></div>
+          <div class="line-chart large" id="timeChart"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="/dataset.js"></script>
+  </body>
+</html>
