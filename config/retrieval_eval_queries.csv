@@ -1,0 +1,62 @@
+query_id,query,query_type,expected_category,relevant_event_ids,notes
+q01,2024 US presidential election winner,lexical,Elections,903193,Direct high-volume election event
+q02,2028 democratic presidential nominee,lexical,Elections,30829,Nominee event family
+q03,bitcoin price in 2025,lexical,Crypto,16096,Yearly Bitcoin price ladder
+q04,ethereum price in 2025,lexical,Crypto,16097,Yearly Ethereum price ladder
+q05,microstrategy sells bitcoin,lexical,Crypto,16167,Company and Bitcoin event
+q06,2026 NBA champion,lexical,Sports,27830,Specific sports outright
+q07,2025 Super Bowl champion,lexical,Sports,11439,Specific sports outright
+q08,champions league winner,lexical,Sports,12585,Football outright
+q09,premier league winner,ambiguous,Sports,12483;33507,Two similar Premier League event families
+q10,how many fed rate cuts in 2025,semantic,Economy and Finance,16085,Macro rate-cut ladder
+q11,fed decision in january,lexical,Politics,45883,Fed decision event
+q12,gold closing price in 2025,semantic,Economy and Finance,16168,Commodity price ladder
+q13,crude oil price by end of june,semantic,Economy and Finance,125877,Commodity threshold event
+q14,atlantic hurricane season named storms,semantic,Weather,10558,Hurricane-season count event
+q15,2025 hottest year on record,lexical,Weather,16171,Climate/weather event
+q16,measles cases in the US in 2026,lexical,Weather,91942;414162;301379,Health/weather grouped category in current rules
+q17,eurovision winner 2026,lexical,Culture,98369,Culture event outright
+q18,highest grossing movie in 2025,lexical,Culture,16100,Movie revenue event
+q19,top spotify artist 2025,lexical,Culture,35754,Music/culture event
+q20,best AI model end of 2025,lexical,Technology and AI,16095,AI company ranking event
+q21,tiktok sale announced,semantic,Technology and AI,22976,Technology policy/business event
+q22,tesla unsupervised full self driving,semantic,Technology and AI,25483,Tesla/FSD event
+q23,world cup winner,ambiguous,Geopolitics,30615,Event currently classified as Geopolitics by category rules
+q24,US strikes Iran,semantic,Geopolitics,114242;214807;196959;200766,Geopolitical escalation event family
+q25,russia ukraine ceasefire,semantic,Geopolitics,326314;90428;93595;98354,Russia/Ukraine ceasefire event
+q26,bitcoin price in February,lexical,Crypto,194107,High-volume Bitcoin monthly price ladder from candidate review
+q27,Lighter FDV after launch,semantic,Crypto,28997,Token launch valuation event from candidate review
+q28,MegaETH public sale commitments,lexical,Crypto,65347,Crypto fundraising/launch event from candidate review
+q29,HBO documentary identifies Satoshi,semantic,Crypto,13166,Crypto identity/news event from candidate review
+q30,highest grossing movie in 2024,lexical,Culture,903378,Culture box-office event from candidate review
+q31,Eurovision winner 2025,lexical,Culture,17738,Culture competition event from candidate review
+q32,Stranger Things season 5 character death,semantic,Culture,96664,Entertainment outcome event from candidate review
+q33,Oscars 2026 best picture,lexical,Culture,50251,Awards event from candidate review
+q34,companies acquired before 2027,semantic,Economy and Finance,86832,Acquisition/business event from candidate review
+q35,gold closing price in 2024,semantic,Economy and Finance,13753,Commodity price ladder from candidate review
+q36,Republican presidential nominee 2028,lexical,Elections,31875,Election nominee event from candidate review
+q37,2024 popular vote winner,lexical,Elections,903216,Election popular-vote event from candidate review
+q38,New York City mayoral election,lexical,Elections,23246,Local election event from candidate review
+q39,South Korea next president,semantic,Elections,22254,International election event from candidate review
+q40,Speaker of the House,semantic,Elections,14033,Congressional leadership event from candidate review
+q41,Ireland presidential election,lexical,Elections,21315,International election event from candidate review
+q42,game of the year 2025,lexical,Gaming and Esports,67691,Gaming awards event from candidate review
+q43,IEM Cologne Major 2026 winner,lexical,Gaming and Esports,350795,Esports tournament event from candidate review
+q44,T1 vs Gen.G LCK Road to MSI,semantic,Gaming and Esports,590337,Esports match event from candidate review
+q45,US forces enter Iran,semantic,Geopolitics,158299,Geopolitical escalation event from candidate review
+q46,US Iran permanent peace deal,semantic,Geopolitics,357807,Geopolitical agreement event from candidate review
+q47,Israel Hezbollah ceasefire,semantic,Geopolitics,242420,Middle East ceasefire event from candidate review
+q48,Venezuela leader end of 2026,semantic,Geopolitics,143443,Leadership/geopolitical event from candidate review
+q49,US Venezuela military engagement,semantic,Geopolitics,38884,Geopolitical conflict event from candidate review
+q50,Trump Fed Chair nominee,semantic,Politics,35908,Political appointment event from candidate review
+q51,Pennsylvania margin of victory,lexical,Politics,12623,Election margin event currently categorised as Politics
+q52,global heat increase 2024,semantic,Science and Health,12277,Climate/science event from candidate review
+q53,Stanley Cup champion 2025,lexical,Sports,13241,Sports outright event from candidate review
+q54,F1 drivers champion,lexical,Sports,100371,Sports championship event from candidate review
+q55,NFL MVP,lexical,Sports,12297,Sports awards/outright event from candidate review
+q56,Masters 2026 winner,lexical,Sports,34436,Golf tournament event from candidate review
+q57,college football champion 2025,lexical,Sports,12027,Sports outright event from candidate review
+q58,best AI model end of January,semantic,Technology and AI,96016,AI ranking event from candidate review
+q59,SpaceX IPO closing market cap,semantic,Technology and AI,102007,Technology/business valuation event from candidate review
+q60,Gemini 3 release date,semantic,Technology and AI,80791,AI release timing event from candidate review
+q61,OpenAI next frontier model release,semantic,Technology and AI,100307,AI release timing event from candidate review

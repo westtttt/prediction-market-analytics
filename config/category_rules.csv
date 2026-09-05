@@ -1,0 +1,12 @@
+priority,category,keywords,notes
+10,Crypto,"crypto;bitcoin;ethereum;solana;dogecoin;xrp;crypto prices;up or down;hit price",Crypto and token-price markets, including recurring short-window crypto contracts.
+20,Elections,"election;elections;presidential election;global elections;senate;congress;prime minister;president;polls",Election-specific markets separated from wider politics.
+30,Geopolitics,"geopolitics;ukraine;iran;russia;middle east;israel;ceasefire;military strikes;world elections;world",International conflict and world affairs.
+40,Politics,"politics;trump;biden;kamala;white house;government;supreme court;tariff;policy;minister;mayor",Domestic politics and policy markets.
+45,Gaming and Esports,"esports;counter strike;dota;valorant;league of legends;gaming;video games",Gaming and esports markets.
+50,Sports,"sports;basketball;nba;baseball;soccer;epl;fifa;world cup;football;nfl;ufc;tennis;golf;cricket;champions league;ucl;super bowl;mlb;nhl;boxing",Sports markets.
+70,Weather,"weather;daily temperature;temperature;highest temperature;lowest temperature",Weather and temperature markets.
+80,Culture,"culture;movies;awards;oscars;grammys;music;celebrity;celebrities;tv;stranger things;poker game;tweet markets;youtube;mrbeast;internet",Culture, entertainment, media, and celebrity-adjacent markets.
+90,Economy and Finance,"economy;economic policy;fed;inflation;interest rates;recession;equities;stocks;sp500;s&p;nasdaq;earn 4%;finance;commodities;oil;crude;nymex;futures;pre-market;fdv",Macroeconomic, equity, commodity, and finance markets outside crypto.
+100,Technology and AI,"ai;artificial intelligence;openai;technology;tech;spacex;tesla;elon musk",Technology and AI markets.
+110,Science and Health,"science;health;covid;medicine;disease;vaccine;climate",Science, health, and climate-related markets.

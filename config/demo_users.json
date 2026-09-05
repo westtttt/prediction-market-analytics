@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "email": "free@example.test",
+      "name": "Free Demo User",
+      "role": "free",
+      "algorithm": "pbkdf2_sha256",
+      "iterations": 210000,
+      "salt": "IcAigAYga8OZQsZlrpKrqQ==",
+      "password_hash": "bb9Z8gPgyarJkQV78tH1/bakKPPX46ktTvA4u8qRA/Q="
+    },
+    {
+      "email": "premium@example.test",
+      "name": "Premium Demo User",
+      "role": "premium",
+      "algorithm": "pbkdf2_sha256",
+      "iterations": 210000,
+      "salt": "esDVmqPiWUQRxV6Sxf5Qrw==",
+      "password_hash": "Jtsi0SiTMWWOIseZJckr5vP0s0oj21SSOeR7xXHJGlE="
+    }
+  ]
+}
