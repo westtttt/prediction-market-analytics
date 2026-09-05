@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/stage_07_website/auth_server.mjs"
+  }
+}
