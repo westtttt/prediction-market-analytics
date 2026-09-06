@@ -23,6 +23,11 @@ The full SQLite database and generated analysis outputs are excluded from
 version control because they are large generated artefacts. The folder structure
 is kept so the pipeline can be run with a local database snapshot.
 
+## Run Order
+
+See `docs/run_order.md` for the examiner-facing pipeline order, data
+requirements, website instructions, validation checks and known limitations.
+
 ## Website
 
 Run the local dashboard server with:
