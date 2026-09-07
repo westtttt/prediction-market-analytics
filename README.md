@@ -14,8 +14,8 @@ premium forecast workflow.
   outputs. Large data files are not stored in Git.
 - `scripts/` contains the reproducible project pipeline, ordered by stage.
 - `website/` contains the final dashboard interface.
-- `tests/` contains automated checks for key project behaviour.
-- `docs/` contains short run and testing notes for the submitted artefact.
+- `docs/` contains the examiner-facing run order and validation notes for the
+  submitted artefact.
 
 ## Data
 
