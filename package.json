@@ -1,5 +1,12 @@
 {
+  "name": "forecast-evidence",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Prediction-market forecasting evidence dashboard and local research prototype.",
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "node scripts/stage_07_website/auth_server.mjs"
   }

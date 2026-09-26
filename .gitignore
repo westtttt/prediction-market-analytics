@@ -5,6 +5,7 @@ node_modules/
 __pycache__/
 *.pyc
 .DS_Store
+docs/defence_prep.md
 data/database/*
 !data/database/.gitkeep
 data/outputs/**

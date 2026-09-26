@@ -88,7 +88,7 @@ function renderSummary(data) {
       <p>
         Best method: ${escapeHtml(query.bestMethod.label)} at
         ${escapeHtml(score(query.bestMethod.brier))} Brier across
-        ${escapeHtml(query.targetMarkets)} target markets.
+        ${escapeHtml(query.bestMethod.targetMarkets)} available direct-market targets.
       </p>
     </article>
     <article class="accent">
